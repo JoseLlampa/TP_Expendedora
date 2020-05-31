@@ -64,5 +64,10 @@ namespace Solucion.Forms
             expend.Show();
 
         }
+
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

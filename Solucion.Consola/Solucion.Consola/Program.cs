@@ -13,11 +13,8 @@ namespace Solucion.Consola
         static void Main(string[] args)
         {
             bool _encendida = true;
-
-            string menu = "1) Ingresar Lata \n2) Extraer Lata \n3) Obtener Balance \n4) Mostrar Stock \nX) Salir";
-            
+            string menu = "1) Ingresar Lata \n2) Extraer Lata \n3) Obtener Balance \n4) Mostrar Stock \nX) Apagar";
             string pantalla = "CO1 - Coca Cola Regular \nCO2 - Coca Cola Zero \nSP1 - Sprite Regular \nSP2 - Sprite Zero \nFA1 - Fanta Regular \nFA2 - Fanta Zero";
-            
             Expendedora expend = new Expendedora("Coca-Cola", 3, 0, _encendida);
 
             do
@@ -35,12 +32,11 @@ namespace Solucion.Consola
                 Console.WriteLine("*********************************************");
                 Console.Write("Elija una opción: ");
                 
-
                 try
                 {
                     string opcionSeleccionada = Console.ReadLine();
 
-                    if (ConsolaHelper.EsOpcionValida(opcionSeleccionada, "1234567X"))
+                    if (ConsolaHelper.EsOpcionValida(opcionSeleccionada, "1234X"))
                     {
                         if (opcionSeleccionada.ToUpper() == "X")
                         {
@@ -86,26 +82,23 @@ namespace Solucion.Consola
                     }
 
                 }
-
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error durante la ejecución del comando. Por favor intente nuevamente. Mensaje: " + ex.Message);
-
                 }
+                
                 Console.WriteLine("Ingrese una tecla para continuar.");
-
                 Console.ReadKey();
                 Console.Clear();
             }
-                while (_encendida);
+             while (_encendida);
 
-            Console.WriteLine("Gracias por usar la app.");
+            Console.WriteLine("Ud. seleccionó Apagar. Ingrese una tecla para continuar");
             Console.ReadKey();
         }
 
         private static void IngresarLata(Expendedora expendedora)
         {
-
             try
             {
                 string c = ConsolaHelper.PedirString("código");
@@ -113,9 +106,7 @@ namespace Solucion.Consola
                 double v = ConsolaHelper.PedirDouble("volumen");
 
                 Lata lat = new Lata(c, p, v);
-
                 expendedora.AgregarLata(lat);
-
                 Console.WriteLine("Lata ingresada");
             }
             catch (Exception ex)
@@ -134,7 +125,6 @@ namespace Solucion.Consola
                 double d = ConsolaHelper.PedirDouble("dinero");
 
                 expendedora.ExtraerLata(c, d);
-
                 Console.WriteLine("Retire su pedido. ");
             }
             catch (Exception ex)
@@ -146,16 +136,14 @@ namespace Solucion.Consola
 
         private static void ObtenerBalance(Expendedora expendedora)
         {
-            Console.WriteLine(expendedora.GetBalance());
+            Console.WriteLine("El monto acumulado es de $"+expendedora.GetBalance()+". La cantidad de latas son: "+expendedora.GetCapacidadRestante()+" latas");
         }
-
-        
 
         private static void MostrarStock(Expendedora expendedora)
         {
             foreach (Lata item in expendedora.Latas)
             {
-                string ficha = string.Format("{0} - {1}", item.Nombre, item.Sabor);
+                string ficha = string.Format("{0} - {1} / $/l. {2}", item.Nombre, item.Sabor, item.GetPrecioPorLitro());
                 Console.WriteLine(ficha);
             }
             

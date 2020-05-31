@@ -51,5 +51,10 @@ namespace Solucion.Forms
         {
             this.Owner.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

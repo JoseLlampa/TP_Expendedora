@@ -32,11 +32,12 @@
             this.btnExtraerLata = new System.Windows.Forms.Button();
             this.btnObtenerBalance = new System.Windows.Forms.Button();
             this.btnMostrarStock = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIngresarLata
             // 
-            this.btnIngresarLata.Location = new System.Drawing.Point(254, 63);
+            this.btnIngresarLata.Location = new System.Drawing.Point(254, 33);
             this.btnIngresarLata.Name = "btnIngresarLata";
             this.btnIngresarLata.Size = new System.Drawing.Size(274, 53);
             this.btnIngresarLata.TabIndex = 0;
@@ -46,7 +47,7 @@
             // 
             // btnExtraerLata
             // 
-            this.btnExtraerLata.Location = new System.Drawing.Point(251, 149);
+            this.btnExtraerLata.Location = new System.Drawing.Point(254, 114);
             this.btnExtraerLata.Name = "btnExtraerLata";
             this.btnExtraerLata.Size = new System.Drawing.Size(274, 51);
             this.btnExtraerLata.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // btnObtenerBalance
             // 
-            this.btnObtenerBalance.Location = new System.Drawing.Point(254, 234);
+            this.btnObtenerBalance.Location = new System.Drawing.Point(254, 198);
             this.btnObtenerBalance.Name = "btnObtenerBalance";
             this.btnObtenerBalance.Size = new System.Drawing.Size(270, 49);
             this.btnObtenerBalance.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // btnMostrarStock
             // 
-            this.btnMostrarStock.Location = new System.Drawing.Point(254, 325);
+            this.btnMostrarStock.Location = new System.Drawing.Point(254, 277);
             this.btnMostrarStock.Name = "btnMostrarStock";
             this.btnMostrarStock.Size = new System.Drawing.Size(271, 53);
             this.btnMostrarStock.TabIndex = 3;
@@ -74,11 +75,22 @@
             this.btnMostrarStock.UseVisualStyleBackColor = true;
             this.btnMostrarStock.Click += new System.EventHandler(this.btnMostrarStock_Click);
             // 
+            // btnApagar
+            // 
+            this.btnApagar.Location = new System.Drawing.Point(317, 356);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(138, 59);
+            this.btnApagar.TabIndex = 4;
+            this.btnApagar.Text = "APAGAR";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
             // frmExpendedora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnMostrarStock);
             this.Controls.Add(this.btnObtenerBalance);
             this.Controls.Add(this.btnExtraerLata);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Button btnExtraerLata;
         private System.Windows.Forms.Button btnObtenerBalance;
         private System.Windows.Forms.Button btnMostrarStock;
+        private System.Windows.Forms.Button btnApagar;
     }
 }

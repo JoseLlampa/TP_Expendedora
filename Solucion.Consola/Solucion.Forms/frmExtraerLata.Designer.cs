@@ -34,12 +34,14 @@
             this.txtDinero = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(132, 106);
+            this.lblCodigo.Location = new System.Drawing.Point(22, 48);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(116, 17);
             this.lblCodigo.TabIndex = 0;
@@ -49,7 +51,7 @@
             // lblDinero
             // 
             this.lblDinero.AutoSize = true;
-            this.lblDinero.Location = new System.Drawing.Point(134, 177);
+            this.lblDinero.Location = new System.Drawing.Point(24, 119);
             this.lblDinero.Name = "lblDinero";
             this.lblDinero.Size = new System.Drawing.Size(114, 17);
             this.lblDinero.TabIndex = 1;
@@ -57,21 +59,21 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(273, 103);
+            this.txtCodigo.Location = new System.Drawing.Point(163, 45);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(379, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(232, 22);
             this.txtCodigo.TabIndex = 2;
             // 
             // txtDinero
             // 
-            this.txtDinero.Location = new System.Drawing.Point(273, 179);
+            this.txtDinero.Location = new System.Drawing.Point(163, 121);
             this.txtDinero.Name = "txtDinero";
-            this.txtDinero.Size = new System.Drawing.Size(379, 22);
+            this.txtDinero.Size = new System.Drawing.Size(232, 22);
             this.txtDinero.TabIndex = 3;
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(507, 283);
+            this.btnOk.Location = new System.Drawing.Point(250, 222);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(145, 56);
             this.btnOk.TabIndex = 4;
@@ -81,7 +83,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(273, 284);
+            this.btnVolver.Location = new System.Drawing.Point(27, 223);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(151, 55);
             this.btnVolver.TabIndex = 5;
@@ -89,11 +91,23 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Solucion.Forms.Properties.Resources.captura_1__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(516, 45);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 361);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmExtraerLata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtDinero);
@@ -103,6 +117,7 @@
             this.Name = "frmExtraerLata";
             this.Text = "EXTRAER LATA";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmExtraerLata_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +131,6 @@
         private System.Windows.Forms.TextBox txtDinero;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

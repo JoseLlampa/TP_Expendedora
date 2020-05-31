@@ -35,6 +35,8 @@ namespace Solucion.LibreriaNegocio
         public void AgregarLata(Lata latas)
         {
             //agregar validaciones
+            if ((latas.Codigo != "CO1") && (latas.Codigo != "CO2") && (latas.Codigo != "SP1") && (latas.Codigo != "SP2") && (latas.Codigo != "FA1") && (latas.Codigo != "FA2"))
+                throw new Exception("Ingrese un código valido");
 
             this.latas.Add(latas);
         }
@@ -61,6 +63,7 @@ namespace Solucion.LibreriaNegocio
 
         public string GetBalance()
         {
+
             return Convert.ToString(this.Dinero);
         }
 

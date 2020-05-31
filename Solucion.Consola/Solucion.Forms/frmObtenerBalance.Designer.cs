@@ -32,12 +32,13 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblDineroValor = new System.Windows.Forms.Label();
             this.lblCantidadValor = new System.Windows.Forms.Label();
+            this.lblBalance = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDinero
             // 
             this.lblDinero.AutoSize = true;
-            this.lblDinero.Location = new System.Drawing.Point(35, 83);
+            this.lblDinero.Location = new System.Drawing.Point(32, 172);
             this.lblDinero.Name = "lblDinero";
             this.lblDinero.Size = new System.Drawing.Size(93, 17);
             this.lblDinero.TabIndex = 0;
@@ -46,7 +47,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(34, 140);
+            this.lblCantidad.Location = new System.Drawing.Point(31, 229);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(122, 17);
             this.lblCantidad.TabIndex = 1;
@@ -55,7 +56,7 @@
             // lblDineroValor
             // 
             this.lblDineroValor.AutoSize = true;
-            this.lblDineroValor.Location = new System.Drawing.Point(212, 83);
+            this.lblDineroValor.Location = new System.Drawing.Point(209, 172);
             this.lblDineroValor.Name = "lblDineroValor";
             this.lblDineroValor.Size = new System.Drawing.Size(13, 17);
             this.lblDineroValor.TabIndex = 2;
@@ -64,17 +65,28 @@
             // lblCantidadValor
             // 
             this.lblCantidadValor.AutoSize = true;
-            this.lblCantidadValor.Location = new System.Drawing.Point(212, 140);
+            this.lblCantidadValor.Location = new System.Drawing.Point(209, 229);
             this.lblCantidadValor.Name = "lblCantidadValor";
             this.lblCantidadValor.Size = new System.Drawing.Size(13, 17);
             this.lblCantidadValor.TabIndex = 3;
             this.lblCantidadValor.Text = "-";
+            // 
+            // lblBalance
+            // 
+            this.lblBalance.AutoSize = true;
+            this.lblBalance.Location = new System.Drawing.Point(32, 80);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(0, 17);
+            this.lblBalance.TabIndex = 4;
+            this.lblBalance.Click += new System.EventHandler(this.label1_Click);
+            this.lblBalance.Text = "-";
             // 
             // frmObtenerBalance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblBalance);
             this.Controls.Add(this.lblCantidadValor);
             this.Controls.Add(this.lblDineroValor);
             this.Controls.Add(this.lblCantidad);
@@ -93,5 +105,6 @@
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblDineroValor;
         private System.Windows.Forms.Label lblCantidadValor;
+        private System.Windows.Forms.Label lblBalance;
     }
 }

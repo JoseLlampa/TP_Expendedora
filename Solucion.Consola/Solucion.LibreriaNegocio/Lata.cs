@@ -20,9 +20,9 @@ namespace Solucion.LibreriaNegocio
         public double Precio { get => precio; set => precio = value; }
         public double Volumen { get => volumen; set => volumen = value; }
 
-        private double GetPrecioPorLitro()
+        public double GetPrecioPorLitro()
         {
-            return Precio / Volumen;
+            return Math.Truncate((Precio / Volumen) * 100) / 100;
         }
 
         public override string ToString()
