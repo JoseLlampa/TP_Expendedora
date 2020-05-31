@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E237A772-513D-44DE-A1BD-2FE7BC7F5E2A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Solucion.Consola</RootNamespace>
-    <AssemblyName>Solucion.Consola</AssemblyName>
+    <ProjectGuid>{564B49EE-2A5B-4DE0-AE61-C9EE025E168A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solucion.LibreriaConsola</RootNamespace>
+    <AssemblyName>Solucion.LibreriaConsola</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,21 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="ConsolaHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Solucion.LibreriaConsola\Solucion.LibreriaConsola.csproj">
-      <Project>{564b49ee-2a5b-4de0-ae61-c9ee025e168a}</Project>
-      <Name>Solucion.LibreriaConsola</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Solucion.LibreriaNegocio\Solucion.LibreriaNegocio.csproj">
-      <Project>{39fde6a0-efa7-4015-8ae0-db9516cb2089}</Project>
-      <Name>Solucion.LibreriaNegocio</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

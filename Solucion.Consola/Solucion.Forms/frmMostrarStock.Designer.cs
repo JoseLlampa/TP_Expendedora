@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lstStock);
             this.Name = "frmMostrarStock";
-            this.Text = "frmMostrarStock";
+            this.Text = "STOCK";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMostrarStock_FormClosed);
             this.Load += new System.EventHandler(this.frmMostrarStock_Load);
             this.ResumeLayout(false);

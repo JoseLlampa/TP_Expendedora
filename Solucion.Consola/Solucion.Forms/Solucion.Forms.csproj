@@ -86,11 +86,17 @@
     <EmbeddedResource Include="frmExpendedora.resx">
       <DependentUpon>frmExpendedora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmExtraerLata.resx">
+      <DependentUpon>frmExtraerLata.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIngresarLata.resx">
       <DependentUpon>frmIngresarLata.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMostrarStock.resx">
       <DependentUpon>frmMostrarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmObtenerBalance.resx">
+      <DependentUpon>frmObtenerBalance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

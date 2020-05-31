@@ -1,4 +1,5 @@
-﻿using Solucion.LibreriaNegocio;
+﻿using Solucion.LibreriaConsola;
+using Solucion.LibreriaNegocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,85 +12,135 @@ namespace Solucion.Consola
     {
         static void Main(string[] args)
         {
-            string pantalla = "CO1 - Coca Cola Regular \nCO2 - Coca Cola Zero \nSP1 - Sprite Regular \nSP2 - Sprite Zero \nFA1 - Fanta Regular \nFA2 - Fanta Zero";
+            bool _encendida = true;
 
             string menu = "1) Ingresar Lata \n2) Extraer Lata \n3) Obtener Balance \n4) Mostrar Stock \nX) Salir";
-
-            Expendedora expend = new Expendedora("Coca-Cola", 3, 0, true);
+            
+            string pantalla = "CO1 - Coca Cola Regular \nCO2 - Coca Cola Zero \nSP1 - Sprite Regular \nSP2 - Sprite Zero \nFA1 - Fanta Regular \nFA2 - Fanta Zero";
+            
+            Expendedora expend = new Expendedora("Coca-Cola", 3, 0, _encendida);
 
             do
             {
-                Console.WriteLine(pantalla);
+                Console.WriteLine("*********************************************");
+                Console.WriteLine("                                     _       ");
+                Console.WriteLine("  ___ ___   ___ __ _        ___ ___ | | __ _ ");
+                Console.WriteLine(@" / __/ _ \ / __/ _` |_____ / __/ _ \| |/ _` |");
+                Console.WriteLine("| (_| (_) | (_| (_| |_____| (_| (_) | | (_| |");
+                Console.WriteLine(@" \___\___/ \___\__,_|      \___\___/|_|\__,_|");
                 Console.WriteLine();
+
                 Console.WriteLine(menu);
+                Console.WriteLine();
+                Console.WriteLine("*********************************************");
+                Console.Write("Elija una opción: ");
+                
 
-                string opcionSeleccionada = Console.ReadLine();
-
-                switch (opcionSeleccionada)
+                try
                 {
-                    case "1":
-                        Program.IngresarLata(expend);
-                        break;
+                    string opcionSeleccionada = Console.ReadLine();
 
-                    case "2":
-                        Program.ExtraerLata(expend);
-                        break;
+                    if (ConsolaHelper.EsOpcionValida(opcionSeleccionada, "1234567X"))
+                    {
+                        if (opcionSeleccionada.ToUpper() == "X")
+                        {
+                            _encendida = false;
+                            continue;
+                        }
+                        switch (opcionSeleccionada)
+                        {
+                            case "1":
+                                Console.WriteLine();
+                                Console.WriteLine(pantalla);
+                                Console.WriteLine();
+                                Program.IngresarLata(expend);
+                                break;
 
-                    case "3":
-                        Program.ObtenerBalance(expend);
-                        break;
+                            case "2":
+                                Console.WriteLine();
+                                Console.WriteLine(pantalla);
+                                Console.WriteLine();
+                                Program.ExtraerLata(expend);
+                                break;
 
-                    case "4":
-                        Program.MostrarStock(expend);
-                        break;
+                            case "3":
+                                Console.WriteLine();
+                                Program.ObtenerBalance(expend);
+                                break;
 
-                    default:
-                        Console.WriteLine("Opcion invalida");
-                        break;
+                            case "4":
+                                Console.WriteLine();
+                                Program.MostrarStock(expend);
+                                break;
+
+                            default:
+                                Console.WriteLine();
+                                Console.WriteLine("Opcion invalida");
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Opción inválida.");
+                    }
+
                 }
+
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error durante la ejecución del comando. Por favor intente nuevamente. Mensaje: " + ex.Message);
+
+                }
+                Console.WriteLine("Ingrese una tecla para continuar.");
 
                 Console.ReadKey();
                 Console.Clear();
+            }
+                while (_encendida);
 
-            } while (expend.Encendida);
-
+            Console.WriteLine("Gracias por usar la app.");
             Console.ReadKey();
         }
 
         private static void IngresarLata(Expendedora expendedora)
         {
-            Console.Write("Ingrese el codigo");
-            string c = Console.ReadLine();
 
-            Console.Write("Ingrese el precio");
-            double p = double.Parse(Console.ReadLine());
+            try
+            {
+                string c = ConsolaHelper.PedirString("código");
+                double p = ConsolaHelper.PedirDouble("precio");
+                double v = ConsolaHelper.PedirDouble("volumen");
 
-            Console.Write("Ingrese volumen");
-            double v = double.Parse(Console.ReadLine());
+                Lata lat = new Lata(c, p, v);
 
-            Lata lat = new Lata(c, p, v);
+                expendedora.AgregarLata(lat);
 
-            expendedora.AgregarLata(lat);
-
-            Console.WriteLine("Lata ingresada");
+                Console.WriteLine("Lata ingresada");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en uno de los datos ingresados. " + ex.Message + " Intente nuevamente. \n\n");
+                //IngresarLata(expendedora);
+            }
+        
         }
 
         private static void ExtraerLata(Expendedora expendedora)
         {
             try
             {
-                Console.WriteLine("Ingrese el codigo: ");
-                string c = Console.ReadLine();
-                Console.WriteLine("Ingrese el dinero: ");
-                double d = double.Parse(Console.ReadLine());
+                string c = ConsolaHelper.PedirString("código");
+                double d = ConsolaHelper.PedirDouble("dinero");
 
                 expendedora.ExtraerLata(c, d);
 
-                Console.WriteLine("Retire su pedido");
+                Console.WriteLine("Retire su pedido. ");
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                //ExtraerLata(expendedora);
             }
         }
 

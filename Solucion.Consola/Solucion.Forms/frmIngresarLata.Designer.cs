@@ -41,7 +41,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(37, 68);
+            this.lblCodigo.Location = new System.Drawing.Point(183, 95);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(52, 17);
             this.lblCodigo.TabIndex = 0;
@@ -50,7 +50,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(38, 130);
+            this.lblPrecio.Location = new System.Drawing.Point(184, 157);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(48, 17);
             this.lblPrecio.TabIndex = 1;
@@ -59,7 +59,7 @@
             // lblVolumen
             // 
             this.lblVolumen.AutoSize = true;
-            this.lblVolumen.Location = new System.Drawing.Point(41, 191);
+            this.lblVolumen.Location = new System.Drawing.Point(172, 217);
             this.lblVolumen.Name = "lblVolumen";
             this.lblVolumen.Size = new System.Drawing.Size(63, 17);
             this.lblVolumen.TabIndex = 2;
@@ -67,30 +67,30 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(136, 63);
+            this.txtCodigo.Location = new System.Drawing.Point(270, 90);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(294, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(371, 22);
             this.txtCodigo.TabIndex = 3;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(136, 130);
+            this.txtPrecio.Location = new System.Drawing.Point(270, 157);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(294, 22);
+            this.txtPrecio.Size = new System.Drawing.Size(371, 22);
             this.txtPrecio.TabIndex = 4;
             // 
             // txtVolumen
             // 
-            this.txtVolumen.Location = new System.Drawing.Point(136, 187);
+            this.txtVolumen.Location = new System.Drawing.Point(270, 214);
             this.txtVolumen.Name = "txtVolumen";
-            this.txtVolumen.Size = new System.Drawing.Size(293, 22);
+            this.txtVolumen.Size = new System.Drawing.Size(370, 22);
             this.txtVolumen.TabIndex = 5;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(538, 300);
+            this.btnAgregar.Location = new System.Drawing.Point(493, 287);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(148, 47);
+            this.btnAgregar.Size = new System.Drawing.Size(148, 60);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -98,9 +98,9 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(136, 300);
+            this.btnVolver.Location = new System.Drawing.Point(270, 287);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(152, 47);
+            this.btnVolver.Size = new System.Drawing.Size(147, 60);
             this.btnVolver.TabIndex = 7;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -120,7 +120,7 @@
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmIngresarLata";
-            this.Text = "frmIngresarLata";
+            this.Text = "INGRESAR LATA";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmIngresarLata_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

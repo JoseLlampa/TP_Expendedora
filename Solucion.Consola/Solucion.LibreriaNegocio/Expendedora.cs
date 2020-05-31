@@ -30,9 +30,11 @@ namespace Solucion.LibreriaNegocio
             this.encendida = encendida;
         }
 
+        
+
         public void AgregarLata(Lata latas)
         {
-            //FALTA validacion de los codigos de lata posibles {C01, C02, SP1, SP2, FA1, FA2}
+            //agregar validaciones
 
             this.latas.Add(latas);
         }
@@ -52,7 +54,7 @@ namespace Solucion.LibreriaNegocio
             }
             else
             {
-                throw new Exception("No hay stock para su pedido");
+                throw new Exception("No hay stock para su pedido. ");
             }
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Solucion.LibreriaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Solucion.Forms
 {
     public partial class frmObtenerBalance : Form
     {
-        public frmObtenerBalance()
+        private Expendedora _expendedora;
+        public frmObtenerBalance(Expendedora expend)
         {
+            _expendedora = expend;
             InitializeComponent();
+        }
+
+        private void frmObtenerBalance_Load(object sender, EventArgs e)
+        {
+            lblDineroValor.Text=_expendedora.GetBalance();
         }
     }
 }

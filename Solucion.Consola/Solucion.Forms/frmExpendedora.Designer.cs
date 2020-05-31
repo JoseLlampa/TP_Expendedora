@@ -36,7 +36,7 @@
             // 
             // btnIngresarLata
             // 
-            this.btnIngresarLata.Location = new System.Drawing.Point(144, 51);
+            this.btnIngresarLata.Location = new System.Drawing.Point(254, 63);
             this.btnIngresarLata.Name = "btnIngresarLata";
             this.btnIngresarLata.Size = new System.Drawing.Size(274, 53);
             this.btnIngresarLata.TabIndex = 0;
@@ -46,25 +46,27 @@
             // 
             // btnExtraerLata
             // 
-            this.btnExtraerLata.Location = new System.Drawing.Point(143, 141);
+            this.btnExtraerLata.Location = new System.Drawing.Point(251, 149);
             this.btnExtraerLata.Name = "btnExtraerLata";
             this.btnExtraerLata.Size = new System.Drawing.Size(274, 51);
             this.btnExtraerLata.TabIndex = 1;
             this.btnExtraerLata.Text = "EXTRAER LATA";
             this.btnExtraerLata.UseVisualStyleBackColor = true;
+            this.btnExtraerLata.Click += new System.EventHandler(this.btnExtraerLata_Click);
             // 
             // btnObtenerBalance
             // 
-            this.btnObtenerBalance.Location = new System.Drawing.Point(146, 226);
+            this.btnObtenerBalance.Location = new System.Drawing.Point(254, 234);
             this.btnObtenerBalance.Name = "btnObtenerBalance";
             this.btnObtenerBalance.Size = new System.Drawing.Size(270, 49);
             this.btnObtenerBalance.TabIndex = 2;
             this.btnObtenerBalance.Text = "OBTENER BALANCE";
             this.btnObtenerBalance.UseVisualStyleBackColor = true;
+            this.btnObtenerBalance.Click += new System.EventHandler(this.btnObtenerBalance_Click);
             // 
             // btnMostrarStock
             // 
-            this.btnMostrarStock.Location = new System.Drawing.Point(146, 317);
+            this.btnMostrarStock.Location = new System.Drawing.Point(254, 325);
             this.btnMostrarStock.Name = "btnMostrarStock";
             this.btnMostrarStock.Size = new System.Drawing.Size(271, 53);
             this.btnMostrarStock.TabIndex = 3;
@@ -82,7 +84,8 @@
             this.Controls.Add(this.btnExtraerLata);
             this.Controls.Add(this.btnIngresarLata);
             this.Name = "frmExpendedora";
-            this.Text = "frmExpendedora";
+            this.Text = "Expendedora COCA-COLA";
+            this.Load += new System.EventHandler(this.frmExpendedora_Load);
             this.ResumeLayout(false);
 
         }
