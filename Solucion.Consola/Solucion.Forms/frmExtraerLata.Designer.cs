@@ -54,20 +54,21 @@
             this.lblDinero.AutoSize = true;
             this.lblDinero.Location = new System.Drawing.Point(24, 119);
             this.lblDinero.Name = "lblDinero";
-            this.lblDinero.Size = new System.Drawing.Size(114, 17);
+            this.lblDinero.Size = new System.Drawing.Size(126, 17);
             this.lblDinero.TabIndex = 1;
-            this.lblDinero.Text = "Ingrese el dinero";
+            this.lblDinero.Text = "Ingrese el dinero $";
+            this.lblDinero.Click += new System.EventHandler(this.lblDinero_Click);
             // 
             // txtDinero
             // 
-            this.txtDinero.Location = new System.Drawing.Point(163, 121);
+            this.txtDinero.Location = new System.Drawing.Point(156, 119);
             this.txtDinero.Name = "txtDinero";
             this.txtDinero.Size = new System.Drawing.Size(232, 22);
             this.txtDinero.TabIndex = 3;
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(250, 222);
+            this.btnOk.Location = new System.Drawing.Point(243, 222);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(145, 56);
             this.btnOk.TabIndex = 4;
@@ -108,7 +109,7 @@
             // cmbVolumenPrecio
             // 
             this.cmbVolumenPrecio.FormattingEnabled = true;
-            this.cmbVolumenPrecio.Location = new System.Drawing.Point(163, 65);
+            this.cmbVolumenPrecio.Location = new System.Drawing.Point(156, 65);
             this.cmbVolumenPrecio.Name = "cmbVolumenPrecio";
             this.cmbVolumenPrecio.Size = new System.Drawing.Size(232, 24);
             this.cmbVolumenPrecio.TabIndex = 8;

@@ -88,7 +88,9 @@ namespace Solucion.Forms
             
         }
 
-        
+        private void lblDinero_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

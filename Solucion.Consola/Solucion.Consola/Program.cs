@@ -102,8 +102,8 @@ namespace Solucion.Consola
             try
             {
                 string c = ConsolaHelper.PedirString("código");
-                double p = ConsolaHelper.PedirDouble("precio");
-                double v = ConsolaHelper.PedirDouble("volumen");
+                double p = ConsolaHelper.PedirDouble("precio $");
+                double v = ConsolaHelper.PedirDouble("volumen en L");
 
                 Lata lat = new Lata(c, p, v);
                 expendedora.AgregarLata(lat);
@@ -122,7 +122,7 @@ namespace Solucion.Consola
             try
             {
                 string c = ConsolaHelper.PedirString("código");
-                double d = ConsolaHelper.PedirDouble("dinero");
+                double d = ConsolaHelper.PedirDouble("dinero $");
 
                 expendedora.ExtraerLata(c, d);
                 Console.WriteLine("Retire su pedido. ");
