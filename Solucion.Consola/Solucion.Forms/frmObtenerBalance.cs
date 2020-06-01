@@ -23,12 +23,9 @@ namespace Solucion.Forms
         private void frmObtenerBalance_Load(object sender, EventArgs e)
         {
             //lblDineroValor.Text=_expendedora.GetBalance();
-            lblBalance.Text = "El monto acumulado es de $" + _expendedora.GetBalance() + ". La cantidad de latas restantes son: " + _expendedora.GetCapacidadRestante() + " unidades";
+            lblBalance.Text = "El monto acumulado es de $ " + _expendedora.GetBalance() + ". La cantidad de latas restantes son: " + _expendedora.GetCapacidadRestante() + " unidades";
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

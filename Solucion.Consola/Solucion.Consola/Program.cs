@@ -143,7 +143,7 @@ namespace Solucion.Consola
         {
             foreach (Lata item in expendedora.Latas)
             {
-                string ficha = string.Format("{0} - {1} / $/l. {2}", item.Nombre, item.Sabor, item.GetPrecioPorLitro());
+                string ficha = string.Format("{0} - {1} / $/L {2}", item.Nombre, item.Sabor, item.GetPrecioPorLitro());
                 Console.WriteLine(ficha);
             }
             

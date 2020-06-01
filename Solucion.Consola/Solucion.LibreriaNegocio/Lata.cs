@@ -27,9 +27,11 @@ namespace Solucion.LibreriaNegocio
 
         public override string ToString()
         {
-            return "Nombre: " + Nombre + " Sabor: " + Sabor;
+            return Codigo+" - Capacidad: "+Volumen+" L - Precio $ "+Precio;
+            //return Nombre + " - " + Volumen + " L" + " - $ "+ Precio;
         }
 
+        
         public Lata(string codigo, double precio, double volumen)
         {
             this.codigo = codigo;

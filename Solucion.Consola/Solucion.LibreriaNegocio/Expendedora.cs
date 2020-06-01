@@ -43,10 +43,18 @@ namespace Solucion.LibreriaNegocio
 
         public Lata ExtraerLata(string c, double d)
         {
+            if ((c != "CO1") && (c != "CO2") && (c != "SP1") && (c != "SP2") && (c != "FA1") && (c != "FA2"))
+                throw new Exception("Ingrese un código valido");
+
             Lata lata = this.latas.SingleOrDefault(x => x.Codigo == c);//Guardo en memoria una lata con codigo igual al ingresado, es decir, c 
 
             if (lata != null)
             {
+                //**************************************
+                if (d<lata.Precio)
+                    throw new Exception("El dinero no es suficiente");
+
+                //***************************************
                 this.Dinero = this.Dinero + d;
 
                 this.latas.Remove(lata);

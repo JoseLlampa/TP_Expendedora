@@ -40,10 +40,10 @@ namespace Solucion.Forms
 
         private void frmExpendedora_Load(object sender, EventArgs e)
         {
-            Lata lat1 = new Lata("CO1", 1, 2);
-            Lata lat2 = new Lata("CO2", 1, 2);
-            Lata lat3 = new Lata("SP1", 1, 2);
-            Lata lat4 = new Lata("FA1", 1, 2);
+            Lata lat1 = new Lata("CO1", 7, 2);
+            Lata lat2 = new Lata("CO2", 6, 2);
+            Lata lat3 = new Lata("SP1", 5, 2);
+            Lata lat4 = new Lata("SP2", 4, 2);
             _expendedora.AgregarLata(lat1);
             _expendedora.AgregarLata(lat2);
             _expendedora.AgregarLata(lat3);

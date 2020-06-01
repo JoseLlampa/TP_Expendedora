@@ -26,12 +26,21 @@ namespace Solucion.Forms
 
         }
 
+        private void CargarComboPrecioVolumen()
+        {
+            
+            cmbVolumenPrecio.DataSource = _expendedora.Latas;
+            
+
+        }
+
         private void btnOk_Click(object sender, EventArgs e)
         {
             try
             {
-                _expendedora.ExtraerLata(txtCodigo.Text, Convert.ToDouble(txtDinero.Text));
-               
+                Lata l = (Lata)cmbVolumenPrecio.SelectedItem;
+                _expendedora.ExtraerLata(Convert.ToString(l.Codigo), Convert.ToDouble(txtDinero.Text));
+                
                 MessageBox.Show("Retire su bebida");
 
             }
@@ -56,5 +65,24 @@ namespace Solucion.Forms
         {
 
         }
+
+        private void frmExtraerLata_Load(object sender, EventArgs e)
+        {
+
+            CargarComboPrecioVolumen();
+            
+
+        }
+
+        public void cmbVolumenPrecio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            Lata l = (Lata)cmbVolumenPrecio.SelectedItem;
+            
+            
+        }
+
+        
+
     }
 }
