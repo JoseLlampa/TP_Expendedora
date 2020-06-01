@@ -42,7 +42,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(22, 24);
+            this.lblCodigo.Location = new System.Drawing.Point(22, 65);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(116, 17);
             this.lblCodigo.TabIndex = 0;
@@ -108,7 +108,7 @@
             // cmbVolumenPrecio
             // 
             this.cmbVolumenPrecio.FormattingEnabled = true;
-            this.cmbVolumenPrecio.Location = new System.Drawing.Point(163, 24);
+            this.cmbVolumenPrecio.Location = new System.Drawing.Point(163, 65);
             this.cmbVolumenPrecio.Name = "cmbVolumenPrecio";
             this.cmbVolumenPrecio.Size = new System.Drawing.Size(232, 24);
             this.cmbVolumenPrecio.TabIndex = 8;

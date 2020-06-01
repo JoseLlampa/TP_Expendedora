@@ -40,8 +40,14 @@ namespace Solucion.Forms
             {
                 Lata l = (Lata)cmbVolumenPrecio.SelectedItem;
                 _expendedora.ExtraerLata(Convert.ToString(l.Codigo), Convert.ToDouble(txtDinero.Text));
-                
+
+                cmbVolumenPrecio.DataSource = _expendedora.Latas;
+
                 MessageBox.Show("Retire su bebida");
+
+
+                cmbVolumenPrecio.DataSource = null;
+                cmbVolumenPrecio.DataSource = _expendedora.Latas; ;
 
             }
             catch (Exception ex)
